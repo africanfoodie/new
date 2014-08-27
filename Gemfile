@@ -1,3 +1,4 @@
+source 'https://code.stripe.com'
 source 'https://rubygems.org'
 
 
@@ -29,6 +30,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'devise'
+
+gem 'stripe'
 
 group :production do 
   gem 'pg'
