@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'home/about'
+
+  get 'home/contact'
+
   devise_for :users
   get 'pages/user'
 
