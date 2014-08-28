@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @product.image.url(:medium) %>
+
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
@@ -20,5 +22,5 @@
   <%= @product.stock %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) class: "btn btn-link" %> |
+<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-link" %> |
 <%= link_to 'Back', products_path, class: "btn btn-link" %>
