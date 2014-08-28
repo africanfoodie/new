@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   #user must be signed in before they can do any of the above actions
+  before_filter :check_user, only: [:edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
@@ -73,5 +74,12 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:title, :description, :price, :stock)
+    end
+
+    def check_user
+      #checks if current user is who created the listing in question, otherwise redirects to homepage.
+      if current_user != @product.user
+        redirect_to root_url, alert: "Sorry this product already belongs to someone!"
+      end
     end
 end
