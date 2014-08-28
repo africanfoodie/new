@@ -19,10 +19,10 @@
         <td><%= product.price %></td>
         <td><%= product.stock %></td>
         <p><%= "Sold by #{product.user.name}" %></p>
-        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Show', product, class: "btn btn-link" %></td>
         <% if (user_signed_in?) && (current_user = product.user) %>
-          <td><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_product_path(product), class: "btn btn-link" %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
           <% end %>
       </tr>
     <% end %>
@@ -32,5 +32,5 @@
 <br>
 
 <% if user_signed_in? %>
-  <%= link_to 'New Product', new_product_path %>
+  <%= link_to 'New Product', new_product_path, class: "btn btn-link" %>
 <% end %>
