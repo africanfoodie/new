@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'home/contact'
 
+  get 'seller' => "products#seller"
+
   devise_for :users
   get 'pages/user'
 
