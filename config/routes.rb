@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/payment'
+
   resources :products
 
   get 'home/about'

@@ -1,10 +1,4 @@
 class PagesController < ApplicationController
-  def user
-  end
-
-  def order
-  end
-
-  def subscription
+  def payment
   end
 end
