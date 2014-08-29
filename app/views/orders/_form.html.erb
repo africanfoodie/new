@@ -1,55 +1,65 @@
-<%= form_for([@product, @order]) do |f| %>
-  <% if @order.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>>
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= image_tag @product.image.url %>
+      </div>
+    </div>
+    <div class-"col-md-8">
 
-      <ul>
-      <% @order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <%= form_for([@product, @order]) do |f| %>
+      <% if @order.errors.any? %>
+        <div id="error_explanation" class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>>
+          <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+          <ul>
+          <% @order.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :city %>
-    <%= f.text_field :city, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :county %>
-    <%= f.text_field :county, class: "form-control" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_field :address, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :county %>
+        <%= f.text_field :county, class: "form-control" %>
+      </div>
 
-  <div class="form-group">
-    <div class="row">
-      <div class="col-md-8">
-        <%= label_tag :card_number, "Credit Card Number" %>
-        <%= text_field_tag :card_number, nil, { :name => nil, :'data-stripe' => "number", class: "form-control" } %>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-8">
+            <%= label_tag :card_number, "Credit Card Number" %>
+            <%= text_field_tag :card_number, nil, { :name => nil, :'data-stripe' => "number", class: "form-control" } %>
+          </div>
+          <div class="col-md-4">
+            <%= label_tag :card_code, "CVC" %>
+            <%= text_field_tag :card_code, nil, { :name => nil, :'data-stripe' => "cvc", class: "form-control" } %>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <%= label_tag :card_code, "CVC" %>
-        <%= text_field_tag :card_code, nil, { :name => nil, :'data-stripe' => "cvc", class: "form-control" } %>
+      <div class="form-group">
+        <%= label_tag nil, "Expiration Date" %>
+        <div class="row">
+          <div class="col-md-3">
+            <%= select_month nil, { use_two_digit_numbers: true }, { :name => nil, :'data-stripe' => "exp-month", class: "form-control" } %>
+          </div>
+          <div class="col-md-3">
+            <%= select_year nil, { start_year: Date.today.year, end_year: Date.today.year+10 }, { :name => nil, :'data-stripe' => "exp-year", class: "form-control" } %>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= label_tag nil, "Expiration Date" %>
-    <div class="row">
-      <div class="col-md-3">
-        <%= select_month nil, { use_two_digit_numbers: true }, { :name => nil, :'data-stripe' => "exp-month", class: "form-control" } %>
-      </div>
-      <div class="col-md-3">
-        <%= select_year nil, { start_year: Date.today.year, end_year: Date.today.year+10 }, { :name => nil, :'data-stripe' => "exp-year", class: "form-control" } %>
-      </div>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <%= f.submit "Complete Order", class: "btn btn-success" %>
+      <div class="form-group">
+        <%= f.submit "Complete Order", class: "btn btn-success" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
