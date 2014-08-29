@@ -28,11 +28,16 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @product = Product.find(params[:product_id])
+    @seller =@product.user
+
+    @order.product_id = @product.id
     @order.buyer_id = current_user.id
+    @order.seller_id = @seller.id
+    #tellng rails what goes in our columns in the database
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
