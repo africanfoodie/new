@@ -2,7 +2,7 @@
   <% if @product.errors.any? %>
     <div id="error_explanation" class="alert alert-danger alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <h4><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h4>
 
       <ul>
       <% @product.errors.full_messages.each do |message| %>
