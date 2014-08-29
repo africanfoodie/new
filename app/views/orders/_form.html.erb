@@ -3,6 +3,8 @@
     <div class="thumbnail">
       <%= image_tag @product.image.url %>
       </div>
+      <h3><%= @product.title %></h3>
+      <h4><%= number_to_currency(@product.price) %></h4>
     </div>
     <div class-"col-md-8">
 
