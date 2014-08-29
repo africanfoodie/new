@@ -38,6 +38,7 @@
     </div>
   </div>
   <div class="form-group">
+    <%= label_tag nil, "Expiration Date" %>
     <div class="row">
       <div class="col-md-3">
         <%= select_month nil, { use_two_digit_numbers: true }, { :name => nil, :'data-stripe' => "exp-month", class: "form-control" } %>
@@ -47,7 +48,6 @@
       </div>
     </div>
   </div>
-
 
   <div class="form-group">
     <%= f.submit "Complete Order", class: "btn btn-success" %>
