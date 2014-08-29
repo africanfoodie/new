@@ -24,6 +24,15 @@
     <%= f.label :county %>
     <%= f.text_field :county, class: "form-control" %>
   </div>
+
+  <div class="form-group">
+  <%= label_tag :card_number, "Credit Card Number" %>
+  <%= text_field_tag :card_number, nil, { :name => nil, :'data-stripe' => "number", class: "form-control" } %>
+  </div>
+   <div class="form-group">
+  <%= label_tag :card_code, "CVC" %>
+  <%= text_field_tag :card_code, nil, { :name => nil, :'data-stripe' => "cvc", class: "form-control" } %>
+  </div>
   <div class="form-group">
     <%= f.submit "Complete Order", class: "btn btn-success" %>
   </div>
