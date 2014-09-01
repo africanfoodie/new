@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  
+  devise_for :users
+  resources :products do 
   resources :orders
+  #tells rails needs product id number
+end
 
   get 'pages/payment'
-
-  resources :products
 
   get 'home/about'
 
@@ -11,11 +14,9 @@ Rails.application.routes.draw do
 
   get 'seller' => "products#seller"
 
-  devise_for :users
-  resources :products do 
-  resources :orders
-  #tells rails needs product id number
-end
+  get 'sales' => "orders#sales"
+
+  get 'purchases' => "orders#purchases"
 
   get 'pages/user'
 
