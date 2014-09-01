@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
     begin
       charge = Stripe::Charge.create(
         :amount => (@product.price * 100).floor,
-        :currency => "gbp",
+        :currency => "usd",
         :card => token
       )
     flash[:notice] = "Thanks for ordering!"
