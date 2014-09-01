@@ -16,7 +16,7 @@ end
 
   get 'sales' => "orders#sales"
 
-  get 'purchases' => "orders#purchases"
+  
 
   get 'pages/user'
 
