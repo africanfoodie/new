@@ -6,30 +6,11 @@ class OrdersController < ApplicationController
     @orders = Order.all.where(seller: current_user).order("Created_at DESC")
   end
 
-   def purchases
-    @orders = Order.all.where(buyer: current_user).order("Created_at DESC")
-  end
-
-  # GET /orders
-  # GET /orders.json
-  # def index
-  #   @orders = Order.all
-  # end
-
-  # GET /orders/1
-  # GET /orders/1.json
-  # def show
-  # end
-
   # GET /orders/new
   def new
     @order = Order.new
     @product = Product.find(params[:product_id])
   end
-
-  # GET /orders/1/edit
-  # def edit
-  # end
 
   # POST /orders
   # POST /orders.json
