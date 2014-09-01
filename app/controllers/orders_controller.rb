@@ -33,11 +33,24 @@ class OrdersController < ApplicationController
     @order.product_id = @product.id
     @order.buyer_id = current_user.id
     @order.seller_id = @seller.id
-    #tellng rails what goes in our columns in the database
+    
+    Stripe.api_key = ENV["STRIPE_API_KEY"]
+    token = params[:stripeToken]
+
+    begin
+      charge = Stripe::Charge.create(
+        :amount => (@product.price * 100).floor,
+        :currency => "gbp",
+        :card => token
+      )
+    flash[:notice] = "Thanks for ordering!"
+  rescue Stripe::CardError => e 
+    flash[:danger] = e.message
+  end
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to root_url, notice: 'Order was successfully created.' }
+        format.html { redirect_to root_url }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
