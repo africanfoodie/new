@@ -41,7 +41,7 @@ gem 'therubyracer'
 
 gem 'coffee-script-source'
 
-
+gem "pdfkit"
 
 group :production do 
   gem 'pg'
