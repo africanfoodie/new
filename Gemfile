@@ -45,6 +45,8 @@ gem "pdfkit"
 
 gem 'wkhtmltopdf-binary'
 
+gem 'activeadmin', github: 'activeadmin'
+
 
 
 group :production do 
