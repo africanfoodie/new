@@ -47,7 +47,7 @@ gem 'wkhtmltopdf-binary'
 
 gem 'activeadmin', github: 'activeadmin'
 
-  gem 'formtastic'
+gem "formtastic"
 
 
 
