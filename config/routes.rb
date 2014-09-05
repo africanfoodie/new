@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  namespace :admin do
+  get 'dashboard/index'
+  end
+
   devise_for :users
   resources :products do 
   resources :orders, only: [:new, :create]
