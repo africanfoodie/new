@@ -32,7 +32,15 @@ class OrdersController < ApplicationController
         :plan => "mixy",
         :email => "payinguser@example.com"
         )
+
+      # charge = Stripe::Charge.create(
+      #  :amount => (@product.price * 100).floor,
+      #  :currency => "gbp",
+      #  :card => token
+      #  )
+
       flash[:notice] = "Thanks for ordering!"
+
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
@@ -47,6 +55,8 @@ class OrdersController < ApplicationController
       end
     end
    end
+ 
+
 
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json

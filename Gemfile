@@ -41,6 +41,8 @@ gem 'therubyracer'
 
 gem 'coffee-script-source'
 
+
+
 group :production do 
   gem 'pg'
   gem 'rails_12factor'
