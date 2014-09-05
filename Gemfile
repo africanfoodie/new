@@ -45,7 +45,7 @@ gem "pdfkit"
 
 gem 'wkhtmltopdf-binary'
 
-gem 'unicorn'
+
 
 group :production do 
   gem 'pg'
