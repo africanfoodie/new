@@ -8,6 +8,14 @@ ActiveAdmin.register AdminUser do
     actions
   end
 
+   form do |f|
+    f.inputs "Admin Details" do
+      f.input :email
+    end
+    f.buttons
+  end
+
+
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
