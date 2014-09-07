@@ -105,6 +105,9 @@ GEM
       sexp_processor (~> 4.4)
     formtastic (2.3.1)
       actionpack (>= 3.0)
+    foundation-rails (5.4.3.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -290,6 +293,7 @@ DEPENDENCIES
   devise
   figaro
   formtastic
+  foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   metric_fu
