@@ -61,6 +61,8 @@ gem 'fog'
 
 gem 'aws-sdk'
 
+gem 'contact_us', '~> 0.5.1'
+
 
 
 group :production do 
