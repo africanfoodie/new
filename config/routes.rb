@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   #tells rails needs product id number
 end
 
-  get 'pages/payment'
+  # get 'pages/payment'
 
   get 'home/about'
 
@@ -30,7 +30,7 @@ end
 
   get 'pages/subscription'
 
-  root 'pages#user'
+  root 'home#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
