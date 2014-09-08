@@ -1,4 +1,5 @@
 ActiveAdmin.register Product do
+  # scope :unreleased
 
   index do 
     column :name
@@ -14,6 +15,8 @@ ActiveAdmin.register Product do
     end
     actions
   end
+
+
 
 
   # See permitted parameters documentation:
