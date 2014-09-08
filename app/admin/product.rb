@@ -9,10 +9,12 @@ ActiveAdmin.register Product do
     column :user
     column :category
     column "Release Date", :released_at
-    column :price do |product|
+    column :price, :sortable => :price do |product|
       number_to_currency product.price
+    end
+    actions
   end
-end
+
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
