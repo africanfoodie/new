@@ -57,6 +57,10 @@ gem 'random_password_generator'
 
 gem 'carrierwave'
 
+gem 'fog'
+
+gem 'aws-sdk'
+
 
 
 group :production do 
