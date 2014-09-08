@@ -1,5 +1,18 @@
 ActiveAdmin.register Product do
 
+  index do 
+    column :name
+    column :description
+    column :title
+    column :stock
+    column :image
+    column :user
+    column :category
+    column "Release Date", :released_at
+    column :price do |product|
+      number_to_currency product.price
+  end
+end
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
