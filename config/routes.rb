@@ -24,11 +24,11 @@ end
 
   
 
-  get 'pages/user'
+  # get 'pages/user'
 
-  get 'pages/order'
+  # # get 'pages/order'
 
-  get 'pages/subscription'
+  # get 'pages/subscription'
 
   root 'home#about'
 
