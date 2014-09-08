@@ -53,6 +53,8 @@ gem 'activeadmin', github: 'activeadmin'
 
 gem 'formtastic'
 
+gem 'random_password_generator'
+
 
 
 group :production do 
