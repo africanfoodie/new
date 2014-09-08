@@ -60,6 +60,11 @@ GEM
     builder (3.2.2)
     cane (2.6.2)
       parallel
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     chronic (0.10.2)
     churn (0.0.35)
       chronic (>= 0.2.3)
@@ -289,6 +294,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   bootstrap-sass
+  carrierwave
   coffee-rails (~> 4.0.0)
   coffee-script-source
   devise

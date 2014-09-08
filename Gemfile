@@ -55,6 +55,8 @@ gem 'formtastic'
 
 gem 'random_password_generator'
 
+gem 'carrierwave'
+
 
 
 group :production do 
