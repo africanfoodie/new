@@ -4,6 +4,9 @@ class ProductsController < ApplicationController
   #user must be signed in before they can do any of the above actions
   before_filter :check_user, only: [:edit, :update, :destroy]
 
+  def home
+  end
+
   def seller
     @products = Product.where(user: current_user).order("created_at DESC")
     #displays listings and orders then according to desc order

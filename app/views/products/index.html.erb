@@ -1,4 +1,4 @@
-<div class="center">
+ <div class="center">
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-md-3">
@@ -23,4 +23,6 @@
 
 <% if user_signed_in? %>
   <%= link_to 'New Product', new_product_path, class: "btn btn-link" %>
-<% end %>
+<% end %> 
+
+
