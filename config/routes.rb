@@ -22,6 +22,8 @@ end
 
   get 'sales' => "orders#sales"
 
+  get 'static_pages/productlanding'
+
 
 
   
