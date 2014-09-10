@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :line1, :line2, :town, :county, :postcode)}
   end
 
-  private 
+ private
   def after_sign_up_path_for(resource)
-    edit_user_registration_path
+    edit_user_registration_path(current_user) #basically whichever path you think meets your needs
   end
 end
 
