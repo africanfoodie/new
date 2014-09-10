@@ -30,6 +30,12 @@ end
 
   get 'static_pages/productlanding'
 
+  get "content/veg"
+
+  get "content/fruit"
+
+  get "content/mix"
+
   
 
 
