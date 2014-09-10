@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'content/fruit'
+
+  get 'content/veg'
+
+  get 'content/mix'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   namespace :admin do
