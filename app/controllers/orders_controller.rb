@@ -12,8 +12,10 @@ class OrdersController < ApplicationController
     @product = Product.find(params[:product_id])
   end
 
-  # POST /orders
-  # POST /orders.json
+
+
+  # # POST /orders
+  # # POST /orders.json
   def create
     @order = Order.new(order_params)
     @product = Product.find(params[:product_id])
@@ -93,3 +95,4 @@ class OrdersController < ApplicationController
       params.require(:order).permit(:address, :city, :county)
     end
 end
+
