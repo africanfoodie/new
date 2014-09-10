@@ -1,4 +1,8 @@
-attr_accessor :stripe_card_token
+class Subscription < ActiveRecord::Base
+  belongs_to :plan
+  validates_presence_of :plan_id
+  validates_presence_of :email
+  attr_accessor :stripe_card_token
  
 def save_with_payment
   if valid?
@@ -6,6 +10,7 @@ def save_with_payment
     self.stripe_customer_token = customer.id
     save!
   end
+  
  
    # Handle exceptions
    rescue Stripe::APIError => e
@@ -14,7 +19,6 @@ def save_with_payment
       false
 end
 
-Ruby
 
 def cancel_subscription_plan
 customer = Stripe::Customer.retrieve(stripe_customer_token)

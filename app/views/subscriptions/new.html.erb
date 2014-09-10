@@ -4,7 +4,7 @@
 <% if @subscription.stripe_card_token.present? %>
 Credit card has been provided.
 <% else %>
-<%= label_tag :card_number, "Credit Card Number" >
+<%= label_tag :card_number, "Credit Card Number" %>
 <%= text_field_tag :card_number, nil, name: nil %>
 <%= label_tag :card_code, "Security Code on Card (CVV)" %>
 <%= text_field_tag :card_code, nil, name: nil %>
