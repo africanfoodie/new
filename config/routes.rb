@@ -24,6 +24,8 @@ end
 
   get 'static_pages/productlanding'
 
+  
+
 
 
   
