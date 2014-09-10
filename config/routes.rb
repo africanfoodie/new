@@ -36,6 +36,8 @@ end
 
   get "content/mix"
 
+  get 'subscriptions/new'
+
   
 
 
