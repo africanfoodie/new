@@ -63,6 +63,8 @@ gem 'aws-sdk'
 
 gem 'contact_us', '~> 0.5.1'
 
+gem "cancan"
+
 
 
 group :production do 

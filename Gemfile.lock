@@ -63,6 +63,7 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
+    cancan (1.6.10)
     cane (2.6.2)
       parallel
     carrierwave (0.10.0)
@@ -335,6 +336,7 @@ DEPENDENCIES
   activeadmin!
   aws-sdk
   bootstrap-sass
+  cancan
   carrierwave
   coffee-rails (~> 4.0.0)
   coffee-script-source
