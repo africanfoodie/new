@@ -14,6 +14,37 @@ class OrdersController < ApplicationController
 
 
 
+# def create
+ 
+#     Stripe.api_key = ENV["STRIPE_API_KEY"]
+ 
+#     customer = Stripe::Customer.create(
+#       :description => current_user.email,
+#       # :plan  => params[:charges][:plan_type],
+#       :card  => params[:stripeToken],
+#       :customer => params[:customer]
+#     )
+ 
+#     Stripe::Charge.create(
+#       :amount => 97*100, # incents 
+#       :currency => "usd",
+#       :customer => customer.id
+# )
+    
+#     if !customer.default_card.nil?
+#       flash[:notice] = "Charge went well"
+#       current_user.active_subscription = true
+#       current_user.update_attribute(:customer_id, customer.id)
+#       current_user.save
+#       redirect_to pages_dashboard_path
+#     end
+ 
+#     rescue Stripe::CardError => e
+#       flash[:error] = e.message
+#       redirect_to charges_path
+ 
+#   end
+
   # # POST /orders
   # # POST /orders.json
   def create
@@ -94,5 +125,5 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:address, :city, :county)
     end
-end
 
+end
