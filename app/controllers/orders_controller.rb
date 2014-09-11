@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
     token = params[:stripeToken]
 
     begin
-      charge = Stripe::Customer.create(
+      Stripe::Charge.create(
         :card => token, 
         :plan => "mixy",
         :email => "payinguser@example.com"
