@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :subscriptions, only: [:new, :create, :show, :destroy]
+  #gives standard routes
 
   get 'content/fruit'
 
