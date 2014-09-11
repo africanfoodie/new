@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'subscriptions/create'
+
+  get 'subscriptions/destroy'
+
+  get 'subscriptions/show'
+
   resources :subscriptions, only: [:new, :create, :show, :destroy]
   #gives standard routes
 
