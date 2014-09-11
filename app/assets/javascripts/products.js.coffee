@@ -1,3 +1,4 @@
+
 jQuery ->
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
   subscription.setupForm()
@@ -20,7 +21,7 @@ subscription =
       expYear: $('#card_year').val()
     Stripe.createToken(card, subscription.handleStripeResponse)
  
-  handleStripeResponse: (status, response) >
+  handleStripeResponse: (status, response) ->
     if status == 200
       $('#subscription_stripe_card_token').val(response.id)
       $('#new_subscription')[0].submit()
