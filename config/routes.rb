@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'subscriptions/create'
+
+  get 'subscriptions/destroy'
+
+  get 'subscriptions/show'
+
   get 'content/fruit'
 
   get 'content/veg'
