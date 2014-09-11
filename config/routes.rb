@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'sub/new'
+
+  get 'sub/create'
+
+  get 'sub/destroy'
+
+  get 'sub/show'
+
   get 'subscriptions/create'
 
   get 'subscriptions/destroy'
