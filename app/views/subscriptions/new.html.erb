@@ -1,3 +1,4 @@
+<% form_for @subscription do |f| %>
 <%= f.hidden_field :stripe_card_token %>
 
 <div class="field">
@@ -24,3 +25,4 @@
 <div id="stripe_error">
   <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
 </div>
+<% end %>
