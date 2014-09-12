@@ -43,7 +43,10 @@ end
 
   get 'subscriptions/new'
 
-  
+  post 'contact', to: 'contacts#process_form'
+  root to: 'static_pages#home'
+end
+#this will create a route helper that generates a URL and hands off the request to a controller
 
 
 
