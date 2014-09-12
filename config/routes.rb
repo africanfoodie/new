@@ -4,11 +4,6 @@ Rails.application.routes.draw do
   resources :subscriptions, only: [:new, :create, :show, :destroy]
   #gives standard routes
 
-  get 'content/fruit'
-
-  get 'content/veg'
-
-  get 'content/mix'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
