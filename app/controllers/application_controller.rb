@@ -18,7 +18,10 @@ class ApplicationController < ActionController::Base
   end
 end
 
-#    def after_edit_user_path_for(resource)
+  #  def after_edit_user_registration_path_for(resource)
+  #   redirect_to '/subscriptions/new'
+  # end
+
 
 
 # end
