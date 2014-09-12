@@ -4,7 +4,7 @@
   <% if @subscription.stripe_card_token.present? %>
     Credit card has been provided.
   <% else %>
-    <%= select_tag :plan, options_for_select([['Mixy', 'mixy']]) %>
+    <%= select_tag :plan, options_for_select([['Mixy', 'mixy'],['Veggie', 'Veg'],['Fruity', 'Fruit']]) %>
     <div class="field">
       <%= label_tag :card_number, "Credit Card Number" %>
       <%= text_field_tag :card_number, nil, name: nil %>

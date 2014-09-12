@@ -4,7 +4,7 @@ class SubscriptionsController < ApplicationController
   end
 
  def create
-  raise 'a'
+  # raise 'a'
   @subscription = Subscription.new(params[:subscription].permit(:stripe_card_token))
   if @subscription.save_with_payment(params[:plan]) #(current_user)
     redirect_to @subscription, :notice => "Thank you for subscribing!"
