@@ -12,11 +12,21 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :line1, :line2, :town, :county, :postcode, :password, :password_confrimation, :current_password, :avatar)}
   end
 
+
+  def after_update_user_path_for(resource)
+    new_subscription_path
+  end
+
  private
   def after_sign_in_path_for(resource)
     edit_user_registration_path(current_user) #basically whichever path you think meets your needs
   end
 end
+
+
+  # def after_update_path_for(resource)
+  #   new_subscription_path
+  # end
 
   #  def after_edit_user_registration_path_for(resource)
   #   root to: 'subscriptions#new'
