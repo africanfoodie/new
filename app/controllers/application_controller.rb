@@ -18,6 +18,11 @@ class ApplicationController < ActionController::Base
   end
 end
 
+#    def after_edit_user_path_for(resource)
+
+
+# end
+
 
 
 # def configure_permitted_parameters
