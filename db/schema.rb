@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 20140912102154) do
     t.string   "county"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "listing_id"
     t.integer  "product_id"
     t.integer  "buyer_id"
     t.integer  "seller_id"

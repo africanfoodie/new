@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
-  revision: a7685f9b9fa93716a28bf6324bcfc926a30e3566
+  revision: 6344d292451737cd9869db1be1b3534fe9f6efa6
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -170,7 +170,7 @@ GEM
       activesupport (>= 3.0.0)
     launchy (2.4.2)
       addressable (~> 2.3)
-    libv8 (3.16.14.5)
+    libv8 (3.16.14.7)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -211,7 +211,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    parallel (1.3.1)
+    parallel (1.3.2)
     pdfkit (0.6.2)
     pg (0.17.1)
     polyamorous (1.1.0)
