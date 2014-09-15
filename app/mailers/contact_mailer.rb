@@ -22,15 +22,13 @@ class ContactMailer < ActionMailer::Base
   #   en.contact_mailer.message.subject
   #
 
-    def deliver_message(message)
-    subject:    message.subject
-    body:       :message => message
-    recipients: CONTACT_RECIPIENT
-    from:       message.email
-    sent_on:    Time.now
-    end
+def deliver_message(message)
+  @message = message
+  mail(subject: message.subject, body: message.body, recipients: CONTACT_RECIPIENT, from: message.email, sent_on: Time.now)
+ end
 
   end
-  
+
+
 
 
