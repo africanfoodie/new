@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :messages
+
   resources :subscriptions, only: [:new, :create, :show, :destroy]
   #gives standard routes
 
