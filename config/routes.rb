@@ -24,7 +24,7 @@ end
 
   get 'home/about'
 
-  get 'home/contact'
+  get 'messages/new'
 
   get 'seller' => "products#seller"
 
