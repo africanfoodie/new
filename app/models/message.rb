@@ -1,3 +1,9 @@
 class Message < ActiveRecord::Base
-validates_presence_of :name, :subject, :body
+
+
+  validates :name, :email, :subject, :body, :presence => true
+  validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true
+
+
 end
+
