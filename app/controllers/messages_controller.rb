@@ -67,6 +67,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+      	ContactMailer.deliver_message(@message)
         flash.now[:notice] = 'Thank you for your message!'
         format.html { redirect_to root_path }
         format.json { render :show, status: :created, location: @message }

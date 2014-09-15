@@ -6,9 +6,14 @@ class ContactMailer < ActionMailer::Base
   #
   #   en.contact_mailer.message.subject
   #
-  def message
-    @greeting = "Hi"
+  
+    def message(message)
+    subject    message.subject
+    body       :message => message
+    recipients CONTACT_RECIPIENT
+    from       message.email
+    sent_on    Time.now
+    end
 
-    mail to: "to@example.org"
   end
-end
+

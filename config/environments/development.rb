@@ -27,6 +27,7 @@ Rails.application.configure do
     password: 'your_email_password'
   }
 
+  CONTACT_RECIPIENT = 'yourname@yourdomain.com'
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
