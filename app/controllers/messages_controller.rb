@@ -1,42 +1,5 @@
 # class MessagesController < InheritedResources::Base
 
-# # 	def new
-# #     @messages = Message.new
-# #   	end
-
-# #     def create
-# #     @messages = Message.new(secure_params)
-# # 	if @message.save
-# #   	flash[:notice] = 'Thanks for Your Message'
-# #   	format.html { redirect_to root_path }
-# #   	end
-	
-# # 	end
-# # end
-
-# # class MessagesController < ApplicationController
-#    def show
-#       @message = Message.find params[:id]
-#    end
-
-#    def new
-#       @message = Message.new
-#    end
-
-#    def create
-#       @message = Message.new message_params
-#       @message.save
-#       flash[:notice] = 'Thanks for Your Message'
-#   	format.html { redirect_to root_path }
-#   	end
-#    end
-
-#    private
-
-#    def message_params
-#       params.require(:message).permit(:your, :message, :params)
-#    end
-
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
