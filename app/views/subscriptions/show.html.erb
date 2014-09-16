@@ -1,2 +1,15 @@
-<h1>Subscriptions#show</h1>
-<p>Find me in app/views/subscriptions/show.html.erb</p>
+<h1>View your payment history and cards</h1>
+
+<h4><%= @charges.data.length %> Charges! </h4>
+<% @charges.data.each do |charge| %>
+	 <%= charge.statement_description %>
+	$<%= charge.amount %>
+	<%= Time.at(charge.created).strftime("%d/%m/%y") %>
+<% end %>
+
+<h4><%= @charges.data.length %> Cards! </h4>
+<% @cards.each do |card| %>
+	<%= card.brand %>
+	**** **** **** <%= card.last4 %>
+	<%= card.exp_month %>/<%= card.exp_year %>
+<% end %>

@@ -41,7 +41,7 @@ gem 'figaro'
 
 gem 'stripe'
 
-gem 'therubyracer'
+# gem 'therubyracer'
 
 gem 'coffee-script-source'
 

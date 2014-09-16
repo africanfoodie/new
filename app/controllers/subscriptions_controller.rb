@@ -17,5 +17,8 @@ end
   end
 
   def show
+    customer_token = current_user.subscription.stripe_customer_token
+    @charges = Stripe::Charge.all(customer: customer_token)
+    @cards =  Stripe::Customer.retrieve(customer_token).cards
   end
 end
