@@ -3,7 +3,7 @@
 <h4><%= @charges.data.length %> Charges! </h4>
 <% @charges.data.each do |charge| %>
 	 <%= charge.statement_description %>
-	$<%= charge.amount %>
+	£<%= charge.amount %>
 	<%= Time.at(charge.created).strftime("%d/%m/%y") %>
 <% end %>
 
