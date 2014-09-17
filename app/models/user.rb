@@ -16,4 +16,6 @@ class User < ActiveRecord::Base
   # # a listings existence depends on the existence of the user that created it
   # has_many :sales, class_name: "Order", foreign_key: "seller_id"
   has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
+
+  has_one :subscription
 end
