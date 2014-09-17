@@ -24,8 +24,6 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'bootstrap-sass'
 
-gem 'metric_fu'
-
 gem 'foundation-rails'
 
 gem "paperclip"
@@ -64,6 +62,8 @@ gem 'aws-sdk'
 gem "cancan"
 
 gem 'simple_form'
+
+gem 'mailcatcher'
 
 
 

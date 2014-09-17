@@ -18,3 +18,5 @@
 # Ignore application configuration
 .project
 /config/application.yml
+
+
