@@ -22,4 +22,6 @@ end
     @charges = customer_token ? Stripe::Charge.all(customer: customer_token) : []
     @cards =  customer_token ? Stripe::Customer.retrieve(customer_token).cards : []
   end
+
+
 end

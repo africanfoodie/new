@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # devise_for :users
   resources :products do 
   resources :orders, only: [:new, :create]
+
   #tells rails needs product id number
 end
 
@@ -42,6 +43,9 @@ end
   get 'subscriptions/new'
 
   get 'subscriptions/payments'
+
+  get 'subscriptions/history'
+
 
   
  
