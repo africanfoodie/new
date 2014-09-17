@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   namespace :admin do
   get 'dashboard/index'
   end
-
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "users/registrations"}
+#  devise_for :users
   # devise_for :users
   resources :products do 
   resources :orders, only: [:new, :create]
