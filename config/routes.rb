@@ -41,6 +41,8 @@ end
 
   get 'subscriptions/new'
 
+  get 'subscriptions/payments'
+
   
  
 

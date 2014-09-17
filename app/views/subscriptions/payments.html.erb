@@ -1,0 +1,8 @@
+<h1>view your card details</h1>
+<h4><%= @charges.data.length %> Cards! </h4>
+<% @cards.each do |card| %>
+	<%= card.brand %>
+	**** **** **** <%= card.last4 %>
+	<%= card.exp_month %>/<%= card.exp_year %>
+<% end %>
+	
