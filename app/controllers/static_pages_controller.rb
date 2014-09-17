@@ -5,3 +5,5 @@ class StaticPagesController < ApplicationController
 
   
 end
+
+#homepage
