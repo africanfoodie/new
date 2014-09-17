@@ -13,9 +13,9 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def after_update_user_path_for(resource)
-    new_subscription_path
-  end
+  # def after_update_user_path_for(resource)
+  #   new_subscription_path
+  # end
 
  private
   def after_sign_in_path_for(resource)
