@@ -1,5 +1,6 @@
 class Subscription < ActiveRecord::Base
   belongs_to :user
+  validates_presence_of :user_id #it should be always compulsary
   # attr_accessible :plan
 
   attr_accessor :stripe_card_token
