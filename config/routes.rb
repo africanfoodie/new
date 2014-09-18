@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :messages
 
   resources :subscriptions, only: [:new, :create, :destroy, :show]
-  
+#   resources :subscriptions do
+#   get '/payments', to: 'subscriptions#payments' # or get 'subscriptions/payments', to: 'subscriptions#payments' (depending on which link you would like to see)
+#   get '/cards', to: 'subscriptions#cards'
+# end
   #gives standard routes
 
 
