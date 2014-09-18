@@ -1,7 +1,7 @@
 class ContactMailer < ActionMailer::Base
-  default from: "amrata.baghel@gmail.com"
+  default from: "emtestrails@gmail.com"
   def sample_email(user)
-     mail(to: "sahil1345@gmail.com", subject: "Hey Sample Buddy") do |format|
+     mail(to: user.email, subject: "Hey Sample Buddy") do |format|
       format.text {render :text => "Knock Knock!"}
     end   
   end
