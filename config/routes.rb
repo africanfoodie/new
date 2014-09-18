@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :messages
 
-  resources :subscriptions, only: [:new, :create, :show, :destroy]
+  resources :subscriptions, only: [:new, :create, :destroy, :show]
   
   #gives standard routes
 
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # devise_for :users
   resources :products do 
   resources :orders, only: [:new, :create]
+
 
   #tells rails needs product id number
 end
