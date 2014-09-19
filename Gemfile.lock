@@ -54,8 +54,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
-    bootstrap-sass (3.2.0.2)
-      sass (~> 3.2)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -280,7 +278,6 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   aws-sdk
-  bootstrap-sass
   cancan
   carrierwave
   coffee-rails (~> 4.0.0)
