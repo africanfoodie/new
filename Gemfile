@@ -43,7 +43,7 @@ gem 'stripe'
 
 gem 'coffee-script-source'
 
-gem "pdfkit"
+# gem "pdfkit"
 
 gem 'wkhtmltopdf-binary'
 
