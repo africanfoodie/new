@@ -36,4 +36,10 @@ end
   end
 
 
+# def cancel_subscription_plan
+# customer = Stripe::Customer.retrieve(stripe_customer_token)
+# customer.cancel_subscription()
+# user.update_attributes(:payment_status => false)
+# true
+# (handle exception)
 end
