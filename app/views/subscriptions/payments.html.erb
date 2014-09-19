@@ -1,7 +1,11 @@
 <h1>View your payment history</h1>
-<h4><%= @charges.data.length %> Charges! </h4>
-<% @charges.data.each do |charge| %>
-     <%= charge.statement_description %>
-    £<%= charge.amount %>
-    <%= Time.at(charge.created).strftime("%d/%m/%y") %>
+<% if @charges.length!=0 %>
+	<h4><%= @charges.data.length %> Payments! </h4>
+	<% @charges.data.each do |charge| %>
+	     <%= charge.statement_description %>
+	    £<%= charge.amount %>
+	    <%= Time.at(charge.created).strftime("%d/%m/%y") %>
+	<% end %>
+<% else %>
+	<h4> No Payments! </h4>
 <% end %>

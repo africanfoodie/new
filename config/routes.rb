@@ -3,11 +3,12 @@ Rails.application.routes.draw do
 
   resources :messages
 
-  resources :subscriptions, only: [:new, :create, :destroy, :show]
-#   resources :subscriptions do
-#   get '/payments', to: 'subscriptions#payments' # or get 'subscriptions/payments', to: 'subscriptions#payments' (depending on which link you would like to see)
-#   get '/cards', to: 'subscriptions#cards'
-# end
+  resources :subscriptions, only: [:new, :create, :show, :destroy] do
+    collection do
+      get :payments
+      get :cards
+    end
+  end
   #gives standard routes
 
 
@@ -45,8 +46,6 @@ end
   get "content/mix"
 
   get 'subscriptions/new'
-
-  get 'subscriptions/payments'
 
   get 'subscriptions/history'
 
