@@ -21,10 +21,6 @@ module Site
     # config.i18n.default_locale = :de
     
 
-
-config.middleware.use PDFKit::Middleware, :print_media_type => true
-
-    
     
   end
 end
