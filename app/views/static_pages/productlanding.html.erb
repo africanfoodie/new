@@ -14,7 +14,7 @@
       <p>The perfect deal for fruits lovers. You get a variety of very affordable fruits, ecovered from the best suppliers and farmers.</p>
       <p><a href="#" data-reveal-id="myModal1">What do I get?</a></p>
       <div>
-        <input type="radio" id="radio01" name="radio" />
+        <input type="radio" id="radio01" name="radio" value="fruity" />
         <label for="radio01"><span></span></label>
       </div>
       </div>
@@ -26,7 +26,7 @@
       <p><a href="#" data-reveal-id="myModal2">What do I get?</a></p>
 
     <div>
-     <input type="radio" id="radio02" name="radio" />
+     <input type="radio" id="radio02" name="radio" value="veggie" />
      <label for="radio02"><span></span></label>
     </div>
 
@@ -37,7 +37,7 @@
       <img src="../assets/images/product_3.png" width="104" alt="">
       <p>The Mixybag offers the best of both worlds: the best of our recovered fruits, vegetables and more. Plenty of fun in perspective!</p>
       <p><a href="#" data-reveal-id="myModal3">What do I get?</a></p>
-     <input type="radio" id="radio03" name="radio" />
+     <input type="radio" id="radio03" name="radio" value="mixie" />
      <label for="radio03"><span></span></label>
 
       <!-- ADD RADIO BUTTONS -->
@@ -45,20 +45,57 @@
   </div>
 </div>
 
+<div class="clear20"></div>
+<div class="row">
+  <div class="large-12 columns">
+    <ul class="right order_btn">
+      <li><p>Order by Saturday 11pm, get your bag by Monday 12pm!</p></li>
+      <li><a class="rounded button" href="/users/sign_up">Begin Order</a></li>
+    </ul>
+  </div>
+</div>
 
 
+<script>
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    }
+
+
+var am=getQueryVariable("item");
+var allElems = document.getElementsByName('radio');
+for (i = 0; i < allElems.length; i++) {
+    if (allElems[i].type == 'radio' && allElems[i].value ==am ) {
+        allElems[i].checked = true;
+    }
+}
+</script>
+
+
+
+
+<!-- MODALS -->
 <div id="myModal1" class="reveal-modal" data-reveal>
   <h2>Awesome. I have it.</h2>
   <p class="lead">Your couch.  It is mine.</p>
   <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
   <a class="close-reveal-modal">&#215;</a>
 </div>
+
 <div id="myModal2" class="reveal-modal" data-reveal>
   <h2>Awesome. I have it.</h2>
   <p class="lead">Your couch.  It is mine.</p>
   <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
   <a class="close-reveal-modal">&#215;</a>
 </div>
+
 <div id="myModal3" class="reveal-modal" data-reveal>
   <h2>Awesome. I have it.</h2>
   <p class="lead">Your couch.  It is mine.</p>
@@ -69,38 +106,6 @@
 
 
 
-<!-- <div class="row collapse">
-    <div class="large-4 columns">
-      <ul class="pricing-table left-side">
-        <li class="title">Fruitybag</li>
-        <li class="price">£9.99</li>
-        <li class="description">Fruitful Choice</li>
-        <li class="bullet-item"><i class="foundicon-graph"></i>Description</li>
-        <li class="cta-button"><a class="button" href="/users/sign_up"></a></li>
-      </ul>
-    </div>
-    <div class="large-4 columns recommended">
-      <ul class="pricing-table">
-        <li class="title">Vegybag</li>
-        <li class="price">£9.99</li>
-        <li class="description">Healthy Healthy</li>
-        <li class="bullet-item"><i class="foundicon-graph"></i>Description</li>
-        <li class="cta-button"><a class="button" href="/users/sign_up"></a></li>
-      </ul>
-    </div>
-    <div class="large-4 columns">
-      <ul class="pricing-table right-side">
-        <li class="title">Mixiebag</li>
-        <li class="price">£9.99</li>
-        <li class="description">Kowabunga</li>
-        <li class="bullet-item"><i class="foundicon-graph"></i>Description</li>
-        <li class="cta-button"><a class="button" href="/users/sign_up"></a></li>
-      </ul>
-    </div>
-  </div>
- -->
-  <p>Order by Saturday 11pm, get your bag by Monday 12pm!</p>
-  <li class="cta-button"><a class="button" href="/users/sign_up">Begin Order</a></li>
 
 
        

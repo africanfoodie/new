@@ -1,26 +1,42 @@
-<%= form_for @subscription do |f| %>
-  <%= f.hidden_field :stripe_card_token %>
+<div class="clear30"></div>
+<div class="row">
+  <h4 class="bold">This train terminates here!</h4>
+  <div class="clear20"></div>
 
-  <% if @subscription.stripe_card_token.present? %>
-    Credit card has been provided.
-  <% else %>
-    <%= select_tag :plan, options_for_select([['Mixy', 'mixy'],['Veggie', 'Veg'],['Fruity', 'Fruit']]) %>
-    <div class="field">
-      <%= label_tag :card_number, "Credit Card Number" %>
-      <%= text_field_tag :card_number, nil, name: nil %>
-    </div>
-    <div class="field">
-      <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-      <%= text_field_tag :card_code, nil, name: nil %>
-    </div>
-    <div class="field">
-      <%= label_tag :card_month, "Card Expiration" %>
-      <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-      <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-    </div>
-    <%= f.submit 'Subscribe' %>
-  <% end %>
-  <div id="stripe_error">
-    <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+  <div class="large-6 columns">
+    <img src="../assets/images/train_terminate.png" alt="">
   </div>
-<% end %>
+  <div class="large-6 columns">
+    <%= form_for @subscription do |f| %>
+      <%= f.hidden_field :stripe_card_token %>
+
+      <% if @subscription.stripe_card_token.present? %>
+        Credit card has been provided.
+      <% else %>
+        <%= select_tag :plan, options_for_select([['Mixy', 'mixy'],['Veggie', 'Veg'],['Fruity', 'Fruit']]) %>
+        <div class="field rounded">
+          <%= label_tag :card_number, "Credit Card Number" %>
+          <%= text_field_tag :card_number, nil, name: nil %>
+        </div>
+        <div class="field rounded">
+          <%= label_tag :card_code, "Security Code on Card (CVV)" %>
+          <%= text_field_tag :card_code, nil, name: nil %>
+        </div>
+        <div class="field rounded">
+          <%= label_tag :card_month, "Card Expiration" %>
+          <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+          <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+        </div>
+
+        <div class="form-group rounded right">
+          <%= f.submit "Order", class: "rounded button" %>
+        </div>
+      <% end %>
+      <div id="stripe_error">
+        <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+      </div>
+    <% end %>
+  </div>  
+</div>
+
+<div class="clear30"></div>

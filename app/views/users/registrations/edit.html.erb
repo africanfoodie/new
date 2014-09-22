@@ -1,85 +1,82 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="clear30"></div>
+<div class="row">
+  <h4 class="bold">This is all the small nitty gritty stuff to get the bag to it’s destination</h4>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  <div class="clear40"></div>
+  <div class="large-6 columns">
+
+    <div class="clear"></div>
+    
 
 
-  <div class="form-group">
-    <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
-    <div class="col-sm-6">
-      <%= f.file_field :avatar %>
-    </div>
+  <div class="facts">
+      <div class="bubble"><p>Did you know? I'm a super orange root vegetable who 
+  will spruce up your vision and make your skin glow!</p>
+      </div>
+      <img class="one" src="../assets/images/carrot.png" width="51" alt="">
+
+      
+      <div class="bubble"><p>Cook me or eat me raw - I'm red, juicy and delicious, 
+  packed with a load of special antioxidants and vitamins.</p>
+      </div>
+      <img class="two" src="../assets/images/tomato.png" width="51" alt="">
+
+      
+      <div class="bubble"><p>Did you know? Apart from being long, yellow and 
+  awesome, I also contain serotonin, which lowers stress!</p>
+      </div>
+      <img class="three" src="../assets/images/banana.png" width="51" alt="">
   </div>
-
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.email_field :email, class: "form-control" %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div class="form-group">
-      Currently waiting confirmation for: <%= resource.unconfirmed_email %>
-    </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-    <%= f.password_field :current_password, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :line1 %>
-    <%= f.text_field :line1, autofocus: true, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :line2 %>
-    <%= f.text_field :line2, autofocus: true, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :town %>
-    <%= f.text_field :town, autofocus: true, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :county %>
-    <%= f.text_field :county, autofocus: true, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :postcode %>
-    <%= f.text_field :postcode, autofocus: true, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :organization %>
-    <%= f.text_field :organization, autofocus: true, class: "form-control" %>
+    
+  <p class="right small">by  <a href="http://twitter.com/francescayac" target="_blank">@francescayac</a></p> 
   </div>
 
  
-  <div class="form-group">
-    <%= f.submit "Update", class: "btn btn-primary" %>
-  </div>
-<% end %>
 
-<h3>Cancel my account</h3>
+<div class="large-6 columns">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+   <%= devise_error_messages! %>
 
-<p>Unhappy? <%= button_to "cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
 
-<%= link_to "Back", :back %>
+    <div class="form-group rounded">
+      <%= f.label :organization %>
+      <%= f.text_field :organization, autofocus: true, class: "form-control" %>
+    </div>
+
+
+<!-- ADD TELEPHONE -->
+    <div class="clear10"></div>
+
+    <div class="form-group rounded">
+      <%= f.label :line1 %>
+      <%= f.text_field :line1, autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group rounded">
+      <%= f.label :line2 %>
+      <%= f.text_field :line2, autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group rounded">
+      <%= f.label :town %>
+      <%= f.text_field :town, autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group rounded">
+      <%= f.label :county %>
+      <%= f.text_field :county, autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group rounded">
+      <%= f.label :postcode %>
+      <%= f.text_field :postcode, autofocus: true, class: "form-control" %>
+    </div>
+
+   
+    <div class="form-group rounded right">
+      <%= f.submit "Next", class: "rounded button" %>
+    </div>
+  <% end %>
+</div>
+
+</div>

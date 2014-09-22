@@ -36,6 +36,7 @@ input:-moz-placeholder { font-size:12px; }
 	  transition:color .2s ease-out, background .2s ease-in;
 }
 
+.clear5{padding:5px 0 5px 0;}
 .clear10{padding:10px 0 10px 0;}
 .clear20{padding:20px 0 20px 0;}
 .clear30{padding:30px 0 30px 0;}
@@ -63,6 +64,7 @@ input:-moz-placeholder { font-size:12px; }
 .white{color:white}
 
 .rounded{border-radius:6px;}
+.rounded input{border-radius:6px;}
 
 .shadow{@include shadow-dark;}
 
@@ -142,6 +144,66 @@ body{
 	padding:20px;
 }
 
+.order_btn{
+	li{
+		display: inline-block;
+		padding-left:20px;
+	}
+}
+
+i.fa.fa-angle-left{
+	font-size: 14px;
+	padding-right: 5px;
+}
+
+
+// Page 2 of 3
+
+.bubble 
+{
+position: relative;
+padding: 20px 20px 2px 20px;
+background: #f5f5f5;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+p{font-size:14px;}
+margin-bottom:25px;
+width:400px;
+float:right;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 9px 9px 9px 0;
+border-color: transparent #f5f5f5;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -9px;
+left: -9px;
+top: 50%;
+}
+
+
+.facts{
+	img.one{
+		margin: 16px 10px 0 0;
+	}
+
+	img.two{
+		margin:70px 10px 0 0;
+	}
+
+	img.three{
+		margin:70px 10px 0 0 ;
+	}
+}
+
+
 
 //CUSTOM RADIO BTN's
 input[type="radio"] {
@@ -170,7 +232,7 @@ input[type="radio"] + label span {
 }
 
 input[type="radio"] + label span {
-     background-color:$black;
+     background-color:none;
 }
 
 input[type="radio"]:checked + label span{
@@ -243,6 +305,81 @@ input[type="radio"]:checked + label span {
 
 
 
+
+
+
+   
+/* ==============
+    GENERAL STYLING OF THE DROPDOWN
+   ============== */   
+
+.animatedDropDown > ul{
+	margin:0 auto;
+	padding:0;
+}
+
+.animatedDropDown > ul > li{ /* will style only the top level li */
+	list-style: none;
+	display: inline-block;
+	position:relative;
+	padding: 7px 25px;
+}
+
+
+.animatedDropDown ul ul { 
+  margin-top:10px;
+  margin-left:0; 
+  padding-left:0; 
+} 
+
+
+
+/* Styling of the dropdown links */
+.animatedDropDown li ul li a{
+	padding:12px;
+	text-decoration:none !important;
+	display:block;
+	font-size:15px;
+}
+
+/* ==============
+    CSS3 Animation fun starts here	
+   ============== */
+/* Slide Down effect */
+.animatedDropDown.slidedown li ul{
+	position:absolute;
+	list-style:none;
+	width:180px;
+	right:5px;
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+	border-radius:0 !important;
+	-webkit-transition:max-height 0.2s ease-in-out;
+	-moz-transition:max-height 0.2s ease-in-out;
+	transition:max-height 0.2s ease-in-out;
+	top:26px;
+	margin-top: 64px;
+	background: $white;
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+/* Slide down effect */
+.animatedDropDown.slidedown li:hover ul{
+	max-height:200px; /* Increase when adding more dropdown items */
+}
+
+
+/* ==============
+   IE FIX
+   ============== */
+.lt-ie8 .home,
+.lt-ie8 .animatedDropDown > ul > li {
+	display:inline;
+	zoom:1;
+}
 
 
 

@@ -6,15 +6,24 @@
           <img src="assets/logo.png" alt="">
         </div>
         <ul class="product">
-          <li><a href="/static_pages/productlanding"><img src="../assets/fruitybag.png" width="166" alt=""></a></li>
-          <li><a href="/static_pages/productlanding"><img src="../assets/veggiebag.png" width="178" alt=""></a></li>
-          <li><a href="/static_pages/productlanding"><img src="../assets/mixiebag.png" width="157" alt=""></a></li>
+          <li><a href="/static_pages/productlanding?item=fruity"><img src="../assets/fruitybag.png" width="166" alt=""></a></li>
+          <li><a href="/static_pages/productlanding?item=veggie"><img src="../assets/veggiebag.png" width="178" alt=""></a></li>
+          <li><a href="/static_pages/productlanding?item=mixie"><img src="../assets/mixiebag.png" width="157" alt=""></a></li>
           <li>|</li>
           <% if user_signed_in? %>
-              <li><%= link_to "Edit me!", edit_user_registration_path %></li>  
-              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
-              <li><%= link_to "subscriptions show", '/subscriptions/show' %></li> 
-              <li><%= link_to "new subscriptions", '/subscriptions/new' %></li>
+            <li><nav class="slidedown animatedDropDown">
+              <ul class="main-menu">
+                <li>
+                  <a href="#">Account</a>
+                  <ul>
+                    <li><%= link_to "Edit me!", edit_user_registration_path %></li>  
+                    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
+                    <li><%= link_to "subscriptions show", '/subscriptions/show' %></li> 
+                    <li><%= link_to "new subscriptions", '/subscriptions/new' %></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav></li>
           <% else %>
               <li><%= link_to "Sign In", new_user_session_path %></li>
           <% end %>
@@ -36,6 +45,7 @@
     </div>
   </div>
 <% end %>
+
 
 
 

@@ -20,10 +20,6 @@
   <body>
 
 
-
-
-
-
 <%= render 'layouts/header' %>
 
 <%= render "layouts/alerts" %>
@@ -40,11 +36,8 @@
   <% end %>
 </div>
 
+<%= yield %>
 
-
-
-    <%= yield %>
-    
 <%= render 'layouts/footer' %>
     <%= javascript_include_tag "application" %>
   </body>
