@@ -1,6 +1,46 @@
+<% if current_page?(root_path) %>
+  <div id="header">
+    <div class="large-12 columns">
+      <div class="nav">
+        <div class="logo left">
+          <img src="assets/logo.png" alt="">
+        </div>
+        <ul class="product right">
+          <li><a href="/static_pages/productlanding"><img src="../assets/fruitybag.png" width="166" alt=""></a></li>
+          <li><a href="/static_pages/productlanding"><img src="../assets/veggiebag.png" width="178" alt=""></a></li>
+          <li><a href="/static_pages/productlanding"><img src="../assets/mixiebag.png" width="157" alt=""></a></li>
+          <li>|</li>
+          <% if user_signed_in? %>
+              <li><%= link_to "Edit me!", edit_user_registration_path %></li>  
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
+              <li><%= link_to "subscriptions show", '/subscriptions/show' %></li> 
+              <li><%= link_to "new subscriptions", '/subscriptions/new' %></li>
+          <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div id="header-page">
+    <div class="large-12 columns">
+      <div class="nav">
+        <div class="logo-page left">
+          <a href="/"><img src="../assets/images/logo.png" alt=""></a>
+        </div>
+        <ul class="product right">
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
 
 
-<div class="row">
+
+
+<!-- <div class="row">
   <nav class="top-bar column" data-topbar>
  
       <ul class="title-area">
@@ -34,6 +74,4 @@
  
     </nav>
 </div>
-
-
-
+ -->
