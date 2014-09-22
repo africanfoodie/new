@@ -8,7 +8,7 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(params[:subscription].permit(:stripe_card_token))
     @subscription.user = current_user
     if @subscription.save_with_payment(params[:plan]) #(current_user)
-      redirect_to @subscription, :notice => "Thank you for subscribing!"
+      redirect_to cards_subscriptions_path, :notice => "Thank you for subscribing!"
     else
       render :new
     end

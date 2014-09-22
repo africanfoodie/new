@@ -1,5 +1,5 @@
 <h1>View your cards</h1>
-<% if @cards.length!=0 %>
+<% if @cards.data.length!=0 %>
 	<h4><%= @cards.data.length %> Cards! </h4>
 	<% @cards.each do |card| %>
 	    <%= card.brand %>

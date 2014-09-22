@@ -1,5 +1,5 @@
 <h1>View your payment history</h1>
-<% if @charges.length!=0 %>
+<% if @charges.data.length!=0 %>
 	<h4><%= @charges.data.length %> Payments! </h4>
 	<% @charges.data.each do |charge| %>
 	     <%= charge.statement_description %>
