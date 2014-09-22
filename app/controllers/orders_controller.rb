@@ -13,40 +13,6 @@ class OrdersController < ApplicationController
   end
 
 
-
-# def create
- 
-#     Stripe.api_key = ENV["STRIPE_API_KEY"]
- 
-#     customer = Stripe::Customer.create(
-#       :description => current_user.email,
-#       # :plan  => params[:charges][:plan_type],
-#       :card  => params[:stripeToken],
-#       :customer => params[:customer]
-#     )
- 
-#     Stripe::Charge.create(
-#       :amount => 97*100, # incents 
-#       :currency => "usd",
-#       :customer => customer.id
-# )
-    
-#     if !customer.default_card.nil?
-#       flash[:notice] = "Charge went well"
-#       current_user.active_subscription = true
-#       current_user.update_attribute(:customer_id, customer.id)
-#       current_user.save
-#       redirect_to pages_dashboard_path
-#     end
- 
-#     rescue Stripe::CardError => e
-#       flash[:error] = e.message
-#       redirect_to charges_path
- 
-#   end
-
-  # # POST /orders
-  # # POST /orders.json
   def create
     @order = Order.new(order_params)
     @product = Product.find(params[:product_id])
@@ -66,12 +32,6 @@ class OrdersController < ApplicationController
         :email => "payinguser@example.com"
         )
 
-      # charge = Stripe::Charge.create(
-      #  :amount => (@product.price * 100).floor,
-      #  :currency => "gbp",
-      #  :card => token
-      #  )
-
       flash[:notice] = "Thanks for ordering!"
 
     rescue Stripe::CardError => e
@@ -89,32 +49,6 @@ class OrdersController < ApplicationController
     end
    end
  
-
-
-  # PATCH/PUT /orders/1
-  # PATCH/PUT /orders/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @order.update(order_params)
-  #       format.html { redirect_to @order, notice: 'Order was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @order }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @order.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-  # DELETE /orders/1
-  # DELETE /orders/1.json
-  # def destroy
-  #   @order.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order

@@ -63,7 +63,8 @@
       <% if user_signed_in? %>
         <li><%= link_to "Edit me!", edit_user_registration_path %></li>  
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
-        <li><%= link_to "subscriptions show", '/subscriptions/show' %></li> 
+        <li><%= link_to "Cards", '/subscriptions/cards' %></li>
+        <li><%= link_to "Payments", '/subscriptions/payments' %></li> 
         <li><%= link_to "new subscriptions", '/subscriptions/new' %></li>
       <% else %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>

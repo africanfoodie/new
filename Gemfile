@@ -43,8 +43,6 @@ gem 'stripe'
 
 gem 'coffee-script-source'
 
-gem "pdfkit"
-
 gem 'wkhtmltopdf-binary'
 
 gem 'activeadmin', github: 'activeadmin'
