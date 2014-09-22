@@ -83,5 +83,7 @@ Rails.application.configure do
 
   # Required for Devise gem, remember to change localhost 3000 to actual application host
   config.action_mailer.default_url_options = { :host => 'http://pacific-dusk-5405.herokuapp.com' }
+
+  config.assets.precompile += %w( vendor/modernizr.js )
   
 end
