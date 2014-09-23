@@ -40,6 +40,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Required for Devise gem
-  config.action_mailer.default_url_options = { :host => 'http://pacific-dusk-5405.herokuapp.com' }
+  # config.action_mailer.default_url_options = { :host => 'http://pacific-dusk-5405.herokuapp.com' }
 
 end
