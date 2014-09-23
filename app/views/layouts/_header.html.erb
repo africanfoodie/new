@@ -18,7 +18,8 @@
                   <ul>
                     <li><%= link_to "Edit me!", edit_user_registration_path %></li>  
                     <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li> 
-                    <li><%= link_to "subscriptions show", '/subscriptions/show' %></li> 
+                    <li><%= link_to "payments", '/subscriptions/cards' %></li> 
+                    <li><%= link_to "status", '/subscriptions/payments' %></li> 
                     <li><%= link_to "new subscriptions", '/subscriptions/new' %></li>
                   </ul>
                 </li>
