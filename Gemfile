@@ -46,6 +46,8 @@ gem 'fog'
 
 gem 'aws-sdk'
 
+gem 'wicked'
+
 
 group :production do 
   gem 'pg'
