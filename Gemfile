@@ -9,7 +9,7 @@ gem 'rails', '4.1.1'
 gem 'sass-rails',   '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 1.0.3'
-gem 'foundation-rails'
+gem 'foundation-rails', git: "git@github.com:Eunoia/foundation-rails.git"
 
 
 # Use jquery as the JavaScript library
