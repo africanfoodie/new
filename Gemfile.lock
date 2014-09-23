@@ -16,7 +16,7 @@ GIT
       sass-rails
 
 GIT
-  remote: git@github.com:Eunoia/foundation-rails.git
+  remote: git://github.com/Eunoia/foundation-rails.git
   revision: 834ef3deaac3a38c5be479cbac5ab133ebffbfc2
   specs:
     foundation-rails (5.4.4.0)
