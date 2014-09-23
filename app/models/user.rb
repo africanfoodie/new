@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
   has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
 
   has_one :subscription
+
+
+
+ 
 end

@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :line1, :line2, :town, :county, :postcode, :password, :password_confrimation, :current_password, :avatar)}
   end
 
+  
 
   # def after_update_user_path_for(resource)
   #   new_subscription_path
