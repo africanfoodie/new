@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :profiles
   resources :messages
 
   resources :subscriptions, only: [:new, :create, :show, :destroy] do
