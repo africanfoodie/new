@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
-gem 'figaro'
+gem "figaro", "~> 0.7.0"
 
 gem 'stripe'
 
