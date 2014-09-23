@@ -19,7 +19,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
   
-  CONTACT_RECIPIENT = 'yourname@yourdomain.com'
+  CONTACT_RECIPIENT = 'em01williams@gmail.com'
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -40,6 +40,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Required for Devise gem
-  config.action_mailer.default_url_options = { :host => 'http://gentle-wildwood-3890.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'http://pacific-dusk-5405.herokuapp.com' }
 
 end
