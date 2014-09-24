@@ -1,1 +1,1 @@
-Stripe.api_key = 'sk_test_znk6WqGytJEFOYBlpOXMK1Os'
+Stripe.api_key = ENV['STRIPE_SECRET_KEY']
