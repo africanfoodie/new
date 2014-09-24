@@ -1,20 +1,20 @@
-ActiveAdmin.register Product do
-  # scope :unreleased
+# ActiveAdmin.register Product do
+#   # scope :unreleased
 
-  index do 
-    column :name
-    column :description
-    column :title
-    column :stock
-    column :image
-    column :user
-    column :category
-    column "Release Date", :released_at
-    column :price, :sortable => :price do |product|
-      number_to_currency product.price
-    end
-    actions
-  end
+#   index do 
+#     column :name
+#     column :description
+#     column :title
+#     column :stock
+#     column :image
+#     column :user
+#     column :category
+#     column "Release Date", :released_at
+#     column :price, :sortable => :price do |product|
+#       number_to_currency product.price
+#     end
+#     actions
+#   end
 
 
 
