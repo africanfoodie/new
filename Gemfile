@@ -36,6 +36,8 @@ gem 'stripe'
 
 gem 'coffee-script-source'
 
+ gem 'uglifier'
+
 # gem 'activeadmin', github: 'activeadmin'
 
 gem 'formtastic'
