@@ -7,3 +7,4 @@ make_active(data_json) # Business logic, when payment succeeds
 when "invoice.payment_failed"
 make_inactive(data_json) # Business logic, when payment fails.
 end
+end
