@@ -36,7 +36,7 @@ gem 'stripe'
 
 gem 'coffee-script-source'
 
-# gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', github: 'activeadmin'
 
 gem 'formtastic'
 
