@@ -1,1 +1,1 @@
-Stripe.api_key = Rails.application.secrets.stripe_secret_key
+Stripe.api_key = 'sk_test_znk6WqGytJEFOYBlpOXMK1Os'
