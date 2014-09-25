@@ -60,6 +60,8 @@ end
 
   get 'static_pages/terms'
 
+  get 'static_pages/how'
+
   
  
 
