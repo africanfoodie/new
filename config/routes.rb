@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   # get 'dashboard/index'
   # end
   devise_for :users, :controllers => {:registrations => "users/registrations"}
+
 #  devise_for :users
   # devise_for :users
   resources :products do 
@@ -61,6 +62,9 @@ end
   get 'static_pages/terms'
 
   get 'static_pages/how'
+
+  get 'users/show'
+
 
   
  
