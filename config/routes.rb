@@ -51,6 +51,8 @@ end
 
   get 'subscriptions/history'
 
+  get 'subscriptions/referrals'
+
   get 'static_pages/about'
 
   get 'static_pages/blog'
