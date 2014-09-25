@@ -50,6 +50,15 @@ end
 
   get 'subscriptions/history'
 
+  get 'static_pages/about'
+
+  get 'static_pages/blog'
+
+  get 'static_pages/careers'
+
+  get 'static_pages/faq'
+
+  get 'static_pages/terms'
 
   
  
