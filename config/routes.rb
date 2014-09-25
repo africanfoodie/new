@@ -51,7 +51,7 @@ end
 
   get 'subscriptions/history'
 
-  get 'subscriptions/referrals'
+  get 'subscriptions/rewards'
 
   get 'static_pages/about'
 
