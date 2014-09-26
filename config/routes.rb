@@ -13,12 +13,13 @@ Rails.application.routes.draw do
   #gives standard routes
 
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-  namespace :admin do
-  get 'dashboard/index'
-  end
+  # devise_for :admin_users, ActiveAdmin::Devise.config
+  # ActiveAdmin.routes(self)
+  # namespace :admin do
+  # get 'dashboard/index'
+  # end
   devise_for :users, :controllers => {:registrations => "users/registrations"}
+
 #  devise_for :users
   # devise_for :users
   resources :products do 
@@ -49,6 +50,22 @@ end
   get 'subscriptions/new'
 
   get 'subscriptions/history'
+
+  get 'subscriptions/rewards'
+
+  get 'static_pages/about'
+
+  get 'static_pages/blog'
+
+  get 'static_pages/careers'
+
+  get 'static_pages/faq'
+
+  get 'static_pages/terms'
+
+  get 'static_pages/how'
+
+  get 'users/show'
 
 
   

@@ -53,7 +53,7 @@ input:-moz-placeholder { font-size:12px; }
 .open{font-family: 'Open Sans', sans-serif;}
 
 .bg{
-	background: url(bg.jpg) no-repeat center center fixed; 
+	background: url(https://s3.amazonaws.com/Sincuru/bg.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -256,7 +256,7 @@ input[type="radio"]:checked + label span {
 //FOOTER
 
 .footer{
-	background: url(pattern.jpg) repeat;
+	background: url(https://s3.amazonaws.com/Sincuru/pattern.jpg) repeat;
 	padding: 0 30px 0 30px;
 	height:150px;
 

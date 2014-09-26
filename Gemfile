@@ -9,7 +9,7 @@ gem 'rails', '4.1.1'
 gem 'sass-rails',   '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 1.0.3'
-gem 'foundation-rails'
+gem 'foundation-rails', git:  "git://github.com/Eunoia/foundation-rails.git"
 
 
 # Use jquery as the JavaScript library
@@ -36,7 +36,9 @@ gem 'stripe'
 
 gem 'coffee-script-source'
 
-gem 'activeadmin', github: 'activeadmin'
+ gem 'uglifier'
+
+# gem 'activeadmin', github: 'activeadmin'
 
 gem 'formtastic'
 
@@ -46,6 +48,8 @@ gem 'fog'
 
 gem 'aws-sdk'
 
+gem 'wicked'
+
 
 group :production do 
   gem 'pg'
@@ -54,6 +58,8 @@ end
 
 group :development, :test do 
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Use ActiveModel has_secure_password
