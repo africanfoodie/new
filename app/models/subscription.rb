@@ -13,8 +13,8 @@ class Subscription < ActiveRecord::Base
   
   def subscribe_to_plan(plan, stripe_card_token)
     customer = Stripe::Customer.retrieve(stripe_customer_token)
-    card_fingerprint = Stripe::Token.retrieve(stripe_card_token).try(:card).fingerprint
-    default_card = customer.cards.all.data.select{|card| card.fingerprint == card_fingerprint}.last
+    card_fingerprint = Stripe::Token.retrieve(stripe_card_token).try(:card).try(:fingerprint)
+    default_card = customer.cards.all.data.select{|card| card.fingerprint == card_fingerprint}.last if card_fingerprint
     default_card = customer.cards.create({:card => stripe_card_token}) unless default_card
     customer.default_card = default_card.id 
     customer.save
