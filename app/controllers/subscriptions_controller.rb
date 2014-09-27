@@ -5,10 +5,16 @@ class SubscriptionsController < ApplicationController
 
  def create
   # raise 'a'
-    @subscription = Subscription.new(params[:subscription].permit(:stripe_card_token))
-    @subscription.user = current_user
-    if @subscription.save_with_payment(params[:plan]) #(current_user)
-      redirect_to cards_subscriptions_path, :notice => "Thank you for subscribing!"
+    if current_user.subscription.present?
+      success = current_user.subscription.subscribe_to_plan(params[:plan], subscription_params[:stripe_card_token])
+    else
+     @subscription =  Subscription.new(subscription_params)
+     @subscription.user = current_user
+     success = @subscription.save_with_payment(params[:plan])   
+    end
+    
+    if success
+      redirect_to '/subscriptions/payments', :notice => "Thank you for subscribing!"
     else
       render :new
     end
@@ -26,8 +32,10 @@ class SubscriptionsController < ApplicationController
     customer_token = current_user.subscription.try(:stripe_customer_token)
     @cards =  customer_token ? Stripe::Customer.retrieve(customer_token).cards : []
   end
-
-
+  private
+  def subscription_params
+    params[:subscription].permit(:stripe_card_token)
+  end
 # def cancel_subscription_plan
 # customer = Stripe::Customer.retrieve(stripe_customer_token)
 # customer.cancel_subscription()
